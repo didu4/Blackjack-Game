@@ -32,17 +32,13 @@ while True:
                 ace = input("Wrong value: ace must have 1 or 11 value\n")
             count += int(ace)
 
-
+        print("You have %d points now" % count)
         if count > 21:
-            print("You have %d points now" % count)
             print("You've lost. Try again!")
             break
         elif count == 21:
-            print("You have %d points now" % count)
             print("Congratulations! You've won!!!")
             break
-        else:
-            print("You have %d points now"%count)
 
     elif choice == 'no':
         print("You have %d points and the game is over. Try again!"%count)
