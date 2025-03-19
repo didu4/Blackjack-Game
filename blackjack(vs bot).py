@@ -50,8 +50,6 @@ while True:
         if player_count > 21:
             print("\nCards You have", player_cards)
             print("Your score:", player_count)
-            print("Cards Dealer has", computer_cards)
-            print("Score of the Dealer:", computer_count, "\n")
             print("You've lost. Try again!")
             exit()
 
