@@ -52,6 +52,13 @@ while True:
             print("Your score:", player_count)
             print("You've lost. Try again!")
             exit()
+        elif player_count == 21:
+            print("\nCards You have", player_cards)
+            print("Your score:", player_count)
+            print("Cards Dealer has", computer_cards)
+            print("Score of the Dealer:", computer_count, "\n")
+            print("Congratulations! You've won!!!")
+            exit()
 
     elif choice == 'no':
         print("You refused to take the card. The game continues\n")
