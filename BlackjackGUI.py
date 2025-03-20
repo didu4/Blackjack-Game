@@ -65,9 +65,23 @@ def stand():
     messagebox.showinfo("Game over.", f"Your score: {player_count}\nScore of the Dealer: {computer_count}\n{result}")
     end_game()
 
+def new_game():
+    global deck, player_cards, computer_cards
+    deck = [2,3,4,5,6,7,8,9,10,'A','J', 'Q', 'K'] * 4
+    random.shuffle(deck)
+    player_cards = [deck.pop(), deck.pop()]
+    computer_cards = [deck.pop(), deck.pop()]
+
+    hit_btn.config(state="normal")
+    stand_btn.config(state="normal")
+    newgame_btn.config(state="disabled")
+    update()
+    
 def end_game():
     hit_btn.config(state="disabled")
     stand_btn.config(state="disabled")
+    newgame_btn.config(state="normal")
+
 
 
 
@@ -86,5 +100,7 @@ hit_btn.pack(side="left",padx=20, pady=20)
 stand_btn = Button(root, text="Stand!", command = stand, font=("Arial", 16, "bold"))
 stand_btn.pack(side="right",padx=20, pady=20)
 
+newgame_btn = Button(root, text="New Game", command = new_game, font=("Arial", 16, "bold"), state="disabled")
+newgame_btn.pack(pady=20)
 update()
 root.mainloop()
