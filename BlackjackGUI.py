@@ -38,10 +38,10 @@ def hit():
 
     player_count = cards_count(player_cards)
     if player_count > 21:
-        messagebox.showinfo("You've lost. Try again!")
+        messagebox.showinfo("Game over!", "You've lost. Try again!")
         end_game()
     elif player_count == 21:
-        messgebox.showinfo("Congratulations! You've won!!!")
+        messgebox.showinfo("Congratulations!",  "You've won!!!")
         end_game()
 
 def stand():
